@@ -4,7 +4,7 @@ import {
     MemoryRouter
   } from "react-router-dom";
 
-test('Example 1 renders successfully', () => {
+test('Welcome renders successfully', () => {
     render(<MemoryRouter><Welcome /></MemoryRouter>);
 
     const element = screen.getByText(/Welcome to User Module/i);
