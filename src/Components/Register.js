@@ -21,11 +21,11 @@ export default class Register extends React.Component {
     submitHandler = (event) => {
        
         console.log(event.target.name);  
-        if (event.target['name'].value === "" || event.target['email'].value === "" || event.target['password'].value === "" ) {
+        if (event.target['fullName'].value === "" || event.target['email'].value === "" || event.target['password'].value === "" ) {
             event.preventDefault();
             this.state.errors.form="Fields can not be empty";
             this.setState(this.state);
-        }else if(event.target['password'].value != event.target['cpassword'].value){
+        }else if(event.target['password'].value != event.target['confirmPassword'].value){
             event.preventDefault();
             this.state.errors.form="Password and confirm password Not matching";
             this.setState(this.state);
